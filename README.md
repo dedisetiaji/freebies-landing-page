@@ -1,20 +1,23 @@
-# hello_nuxt
+# Freebies Landing Page
 
-## Build Setup
+Freebies landing page is simple slicing page created using Nuxt Js and tailwind css
+1. [nuxtjs] (https://id.nuxtjs.org/)
+2. [tailwindcss] (https://tailwindcss.com/)
+3. [freebiestemplate] (https://www.figmacrush.com/) (https://dribbble.com/shots/14310214--FREE-Landingpage-LaslesVPN)
 
+## Installation
+1. Clone this repository
+2. Use the package manager npm or yarn
+3. Install dependencies
 ```bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
+npm install
+yarn
+```
+4. Start the application
+```bash
+npm run dev
+yarn dev
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
