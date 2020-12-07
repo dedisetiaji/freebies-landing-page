@@ -35,38 +35,46 @@ div
     .max-w-sm
       h1.text-black.font-bold.text-2xl We Provide Many Features You Can Use
       p.text-gray-900.text-md.my-5 You can explore the features that we provide with fun and have their own functions each feature.
-        p.text-gray-800.font-light.text-sm.my-2(
-          v-for="list in provider",
-          :key="list"
-        ) {{ list }}
+        div(class="w-2/3")
+          .flex(v-for="list in provider")
+            div(class="w-1/5 p-3")
+              img(src="@/assets/images/check_round.png")
+            div(class="w-4/5 mt-2")
+              .text-gray-800.font-light.text-sm.my-2 {{ list }}
   .h-10
   .max-w-5xl.mx-auto.m-20
     h1.text-black.font-bold.text-2xl.text-center Choose Your Plan
-    p.text-gray-500.text-sm.text-center Let's choose the package that is best for you and explore it happily and cheerfully.
+    div(class="w-2/5 mx-auto")
+      p.text-gray-500.text-sm.text-center Let's choose the package that is best for you and explore it happily and cheerfully.
   .grid.grid-cols-3.max-w-4xl.mx-auto.gap-8
     .p-10.rounded-md.border-2.mx-auto
       img(src="@/assets/images/free.png")
       div
         p.text-black.font-bold.text-2xl.text-center.my-10 Free Plan
-        .grid.grid-cols-2(v-for="list in list.standard" :key="list")
-          div(class="w-2/3")  {{list}}
-           
+        .flex(v-for="list in list.free")
+          div(class="w-1/5")
+            img(src="@/assets/images/check.png")
+          div(class="w-4/5")
+            .text-gray-800.font-light.text-sm.my-2 {{ list }}
     .p-10.rounded-md.border-2.mx-auto
       img(src="@/assets/images/free.png")
       div
-        p.text-black.font-bold.text-2xl.text-center.my-10 Standard Plan
-        p.text-gray-800.font-light.text-sm.my-2(
-          v-for="list in list.standard",
-          :key="list"
-        ) {{ list }}
+        p.text-black.font-bold.text-2xl.text-center.my-10 Basic Plan
+        .flex(v-for="list in list.standard")
+          div(class="w-1/5")
+            img(src="@/assets/images/check.png")
+          div(class="w-4/5")
+            .text-gray-800.font-light.text-sm.my-2 {{ list }}
     .p-10.rounded-md.border-2.mx-auto
       img(src="@/assets/images/free.png")
       div
         p.text-black.font-bold.text-2xl.text-center.my-10 Premium Plan
-        p.text-gray-800.font-light.text-sm.my-2(
-          v-for="list in list.premium",
-          :key="list"
-        ) {{ list }}
+        .flex(v-for="list in list.premium")
+          div(class="w-1/5")
+            img(src="@/assets/images/check.png")
+          div(class="w-4/5")
+            .text-gray-800.font-light.text-sm.my-2 {{ list }}
+   
   .w-50.mx-auto.m-20
     p.font-bold.text-black.text-center.text-2xl Huge Global Network of Fast VPN
     p.font-extra-light.text-gray-800.text-center.text-sm.mt-5 See LaslesVPN everywhere to make it easier for you when you move locations.
@@ -78,8 +86,20 @@ div
       div(class="w-3/5")
         h1.font-bold.text-2xl Subscribe Now for Get Special Features!
         p.text-gray-500.font-light.text-sm.my-5 Let's subscribe with us and find the fun.
-  .w-max-3xl.grid.grid-cols-2.p-10.my-10
-    div
+  .max-w-5xl.grid.grid-cols-2.p-10.my-10.mx-auto
+    .max-w-md
+      img(src="@/assets/images/logo.png" class="h-10")
+      .text-black.font-normal.my-10 LaslesVPN is a private virtual network that has unique features and has high security.
+      .flex
+        .grid.grid-cols-3
+          div
+            img(src="@/assets/images/facebook.png" class="w-20")
+          div
+            img(src="@/assets/images/twitter.png" class="w-20")
+          div
+            img(src="@/assets/images/instagram.png" class="w-20")
+      .my-5
+        .text-gray-500.font-normal.text.sm  ©2020LaslesVPN
     .grid.grid-cols-3.gap-2
       div
         p.font-bold.text-black.product.my-5 Product
@@ -101,6 +121,12 @@ div
           ) {{ list }}
 </template>
 <style scoped>
+.check {
+  background-color: red;
+}
+.dua {
+  background-color: blue;
+}
 </style>
 <script>
 export default {
